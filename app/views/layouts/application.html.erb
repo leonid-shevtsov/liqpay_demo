@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <h1><%=link_to_unless_current 'LiqPAY Demo Webstore', root_url %></h1>
+  <p>
+    <%=link_to 'Gem', 'https://rubygems.org/gems/liqpay' %>
+    <%=link_to 'Source', 'https://github.com/leonid-shevtsov/liqpay_demo' %>
+  </p>
+
+  <%= yield %>
 
 </body>
 </html>

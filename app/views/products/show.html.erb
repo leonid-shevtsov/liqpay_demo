@@ -1,0 +1,8 @@
+<h1><%=@product.title%></h1>
+
+<p>Price: <b><%="%0.2f" % @product.price %> UAH</b></p>
+
+<%=form_for [@product, @product.orders.new] do |f| %>
+  <%=f.hidden_field :product_id %>
+  <%=f.submit 'Buy it now' %>
+<% end %>

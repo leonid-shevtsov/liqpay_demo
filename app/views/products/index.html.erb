@@ -1,0 +1,13 @@
+
+<h2>Check out our wonderful product lineup!</h2>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%=link_to product do %>
+        Buy "<%=product.title %>"
+        for just <%="%0.2f" % product.price %> UAH!
+      <% end %>
+    </li>
+  <% end %>
+</ul>

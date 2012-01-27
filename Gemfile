@@ -37,6 +37,6 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem 'liqpay'
+gem 'liqpay', '0.1.1'
 
 

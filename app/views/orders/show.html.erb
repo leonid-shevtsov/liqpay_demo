@@ -1,0 +1,8 @@
+<h1>Buying "<%=@order.product.title%>"</h1>
+<% if @order.status == 'new' %>
+  <%=liqpay_button @liqpay_request %>
+<% elsif @order.status == 'success' %>
+  <p>Payment succeeded.</p>
+<% else %>
+  <p>Payment failed.</p>
+<% end %>
