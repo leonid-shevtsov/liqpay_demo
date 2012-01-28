@@ -6,3 +6,12 @@
 <% else %>
   <p>Payment failed.</p>
 <% end %>
+
+<% if @order.data %>
+  <h2>Order data</h2>
+  <pre>
+  <% @order.data.each do |key, value| %>
+    <%=key%> => <%=value%>
+  <% end %>
+  </pre>
+<% end %>

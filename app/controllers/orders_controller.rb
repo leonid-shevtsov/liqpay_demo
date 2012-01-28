@@ -1,4 +1,8 @@
 class OrdersController < ApplicationController
+  def index
+    @orders = Order.latest
+  end
+
   def show
     @order = Order.find(params[:id])
 
