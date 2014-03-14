@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/leonid-shevtsov/liqpay
-  revision: 4e8fd26165280b6febcb909f80da9018153e7487
+  revision: 2d67f25e8b1adfc054409ca497276a93ff533e88
   specs:
     liqpay (1.0.0)
 
