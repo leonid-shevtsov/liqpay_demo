@@ -1,4 +1,4 @@
 Liqpay.default_options = {
-  :merchant_id => ENV['MERCHANT_ID'],
-  :merchant_signature => ENV['MERCHANT_SIGNATURE'],
+  :public_key => ENV['LIQPAY_PUBLIC_KEY'],
+  :private_key => ENV['LIQPAY_PRIVATE_KEY']
 }

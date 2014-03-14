@@ -12,7 +12,8 @@ class OrdersController < ApplicationController
         :currency => 'UAH',
         :description => @order.product.title,
         :order_id => @order.id,
-        :result_url => liqpay_payment_order_url(@order) 
+        :result_url => order_url(@order),
+        :server_url => liqpay_payment_order_url(@order) 
       )
     end
   end

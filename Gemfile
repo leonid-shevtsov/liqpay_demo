@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+ruby '2.0.0'
+
+gem 'rails', '~>3.2.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -37,6 +39,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem 'liqpay', '0.1.1'
+#gem 'liqpay', '0.1.2'
+gem 'liqpay', git: 'https://github.com/leonid-shevtsov/liqpay'
 
 

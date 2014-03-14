@@ -7,7 +7,7 @@ class PaymentsController < ApplicationController
     
     @order.data = {}
 
-    (Liqpay::Response::ATTRIBUTES - %w(merchant_id sender_phone transaction_id)).each do |attribute|
+    (Liqpay::Response::ATTRIBUTES - %w(public_key sender_phone transaction_id)).each do |attribute|
       @order.data[attribute] = @liqpay_response.send(attribute)
     end
 
@@ -18,6 +18,6 @@ class PaymentsController < ApplicationController
     end
     redirect_to @order
   rescue Liqpay::InvalidResponse
-    render :text => 'Payment error'
+    render text: 'Payment error', status: 500
   end
 end

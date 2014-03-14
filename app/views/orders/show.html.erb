@@ -1,5 +1,6 @@
 <h1>Buying "<%=@order.product.title%>"</h1>
 <% if @order.status == 'new' %>
+  <p>If you have paid already, the response didn't come in yet from LiqPAY. Refresh this page later.</p>
   <%=liqpay_button @liqpay_request %>
 <% elsif @order.status == 'success' %>
   <p>Payment succeeded.</p>
