@@ -40,6 +40,6 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 #gem 'liqpay', '0.1.2'
-gem 'liqpay', git: 'https://github.com/leonid-shevtsov/liqpay'
+gem 'liqpay', '~>1.0.0'
 
 
