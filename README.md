@@ -1,6 +1,6 @@
 # LiqPAY Demo application
 
-The demo is live at http://liqpay-demo.heroku.com
+Now with Rails 7!
 
 The gem itself is at https://github.com/leonid-shevtsov/liqpay
 

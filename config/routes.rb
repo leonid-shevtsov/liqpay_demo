@@ -1,10 +1,12 @@
-LiqpayDemo::Application.routes.draw do
-  root :to => 'products#index'
+# frozen_string_literal: true
 
-  resources :orders, :only => [:index, :show]
+Rails.application.routes.draw do
+  root to: 'products#index'
 
-  resources :products, :only => :show do 
-    resources :orders, :only => [:create], :shallow => true do
+  resources :orders, only: %i[index show]
+
+  resources :products, only: :show do
+    resources :orders, only: [:create], shallow: true do
       member do
         post '/liqpay_payment' => 'payments#liqpay_payment'
       end

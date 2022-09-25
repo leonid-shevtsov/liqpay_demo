@@ -1,11 +1,12 @@
-class Order < ActiveRecord::Base
-  belongs_to :product
+# frozen_string_literal: true
 
-  validates_presence_of :product_id
+# An Order is an instance of a payment in our database
+class Order < ApplicationRecord
+  belongs_to :product
 
   serialize :data
 
-  scope :latest, order('created_at DESC').limit(100)
+  scope :latest, -> { order(created_at: :desc).limit(100) }
 
   before_create :set_status_to_new
 
